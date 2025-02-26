@@ -20,7 +20,9 @@ class Category(models.Model):
     """Модель категории товаров."""
 
     name = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(blank=True, unique=True)
+    slug = models.SlugField(
+        blank=True, unique=True, help_text='Заполняется автоматически'
+    )
     image = models.ImageField(upload_to='categories/')
 
     class Meta:
@@ -50,7 +52,9 @@ class Subcategory(models.Model):
         Category, on_delete=models.CASCADE
     )
     name = models.CharField(max_length=100)
-    slug = models.SlugField(blank=True)
+    slug = models.SlugField(
+        blank=True, help_text='Заполняется автоматически'
+    )
     image = models.ImageField(upload_to='subcategories/')
 
     class Meta:
@@ -70,10 +74,9 @@ class Subcategory(models.Model):
     def save(self, *args, **kwargs):
         """Переопределенный метод сохранения для авто-генерации slug."""
 
-        if not self.slug:
-            if not self.category.slug:
-                self.category.save()
-            self.slug = f'{self.category.slug}-{slugify(unidecode(self.name))}'
+        if not self.category.slug:
+            self.category.save()
+        self.slug = f'{self.category.slug}-{slugify(unidecode(self.name))}'
         super().save(*args, **kwargs)
 
 
@@ -84,18 +87,22 @@ class Product(models.Model):
         Subcategory, on_delete=models.CASCADE
     )
     name = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True, blank=True)
+    slug = models.SlugField(
+        unique=True, blank=True, help_text='Заполняется автоматически'
+    )
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image_original = models.ImageField(
         upload_to='products/original/'
     )
     image_medium = models.ImageField(
         upload_to='products/medium/',
-        blank=True, null=True
+        blank=True, null=True,
+        help_text='Генерируется автоматически'
     )
     image_thumbnail = models.ImageField(
         upload_to='products/thumbnail/',
-        blank=True, null=True
+        blank=True, null=True,
+        help_text='Генерируется автоматически'
     )
 
     class Meta:
@@ -111,9 +118,9 @@ class Product(models.Model):
         Переопределенный метод сохранения для авто-генерации slug
         и создания изображений в 3-х размерах.
         """
-
-        if not self.slug:
-            self.slug = slugify(unidecode(self.name))
+        if not self.subcategory.slug:
+            self.subcategory.save()
+        self.slug = f'{self.subcategory.slug}-{slugify(unidecode(self.name))}'
         super().save(*args, **kwargs)
 
         if self.image_original and (
