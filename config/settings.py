@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'django_filters',
     'djoser',
+    'drf_spectacular',
 
     'api.apps.ApiConfig',
     'store.apps.StoreConfig',
@@ -136,6 +137,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 AUTH_USER_MODEL = 'store.CustomUser'
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'API магазина продуктов',
+    'DESCRIPTION': 'Документация API для проекта grocery_store',
+    'VERSION': '1.0.0',
+}
