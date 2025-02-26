@@ -138,10 +138,7 @@ class CartViewSet(viewsets.ViewSet):
                 status=status.HTTP_404_NOT_FOUND
             )
         cart_item.delete()
-        return Response(
-            {'detail': 'Продукт удалён из корзины'},
-            status=status.HTTP_204_NO_CONTENT
-        )
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     @action(detail=False, methods=['delete'], url_path='clear')
     def clear_cart(self, request):
@@ -151,7 +148,4 @@ class CartViewSet(viewsets.ViewSet):
         """
         cart = self.get_cart(request)
         cart.items.all().delete()
-        return Response(
-            {'detail': 'Корзина очищена'},
-            status=status.HTTP_204_NO_CONTENT
-        )
+        return Response(status=status.HTTP_204_NO_CONTENT)
