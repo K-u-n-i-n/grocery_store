@@ -1,0 +1,62 @@
+[
+{
+  "model": "store.subcategory",
+  "pk": 8,
+  "fields": {
+    "category": 1,
+    "name": "Китай",
+    "slug": "frukty-kitai",
+    "image": "subcategories/china_QBsNR4X.jpg"
+  }
+},
+{
+  "model": "store.subcategory",
+  "pk": 9,
+  "fields": {
+    "category": 1,
+    "name": "Россия",
+    "slug": "frukty-rossiia",
+    "image": "subcategories/Trikolor_QgZ1uLp.jpg"
+  }
+},
+{
+  "model": "store.subcategory",
+  "pk": 10,
+  "fields": {
+    "category": 1,
+    "name": "Италия",
+    "slug": "frukty-italiia",
+    "image": "subcategories/Италия_aexQO9D.jpg"
+  }
+},
+{
+  "model": "store.subcategory",
+  "pk": 11,
+  "fields": {
+    "category": 2,
+    "name": "Россия",
+    "slug": "ovoshchi-rossiia",
+    "image": "subcategories/Trikolor_YC4vDSc.jpg"
+  }
+},
+{
+  "model": "store.subcategory",
+  "pk": 12,
+  "fields": {
+    "category": 2,
+    "name": "Италия",
+    "slug": "ovoshchi-italiia",
+    "image": "subcategories/Италия_BtlhEGk.jpg"
+  }
+},
+{
+  "model": "store.subcategory",
+  "pk": 13,
+  "fields": {
+    "category": 2,
+    "name": "Китай",
+    "slug": "ovoshchi-kitai",
+    "image": "subcategories/china_PaHkd40.jpg"
+  }
+}
+]

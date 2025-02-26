@@ -1,0 +1,20 @@
+[
+{
+  "model": "store.category",
+  "pk": 1,
+  "fields": {
+    "name": "Фрукты",
+    "slug": "frukty",
+    "image": "categories/Фрукты.jpg"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 2,
+  "fields": {
+    "name": "Овощи",
+    "slug": "ovoshchi",
+    "image": "categories/Овощи.jpg"
+  }
+}
+]

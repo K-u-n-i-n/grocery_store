@@ -1,0 +1,158 @@
+[
+{
+  "model": "store.product",
+  "pk": 5,
+  "fields": {
+    "subcategory": 10,
+    "name": "Яблоко",
+    "slug": "frukty-italiia-iabloko",
+    "price": "55.00",
+    "image_original": "products/original/Яблоко.jpg",
+    "image_medium": "products/medium/Яблоко.jpg",
+    "image_thumbnail": "products/thumbnail/Яблоко.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 6,
+  "fields": {
+    "subcategory": 8,
+    "name": "Яблоко",
+    "slug": "frukty-kitai-iabloko",
+    "price": "100.00",
+    "image_original": "products/original/Яблоко_wPStGNY.jpg",
+    "image_medium": "products/medium/Яблоко_wPStGNY.jpg",
+    "image_thumbnail": "products/thumbnail/Яблоко_wPStGNY.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 7,
+  "fields": {
+    "subcategory": 9,
+    "name": "Яблоко",
+    "slug": "frukty-rossiia-iabloko",
+    "price": "70.00",
+    "image_original": "products/original/Яблоко_UhT7acO.jpg",
+    "image_medium": "products/medium/Яблоко_UhT7acO.jpg",
+    "image_thumbnail": "products/thumbnail/Яблоко_UhT7acO.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 8,
+  "fields": {
+    "subcategory": 10,
+    "name": "Мандарины",
+    "slug": "frukty-italiia-mandariny",
+    "price": "130.00",
+    "image_original": "products/original/Мандарины.jpg",
+    "image_medium": "products/medium/Мандарины.jpg",
+    "image_thumbnail": "products/thumbnail/Мандарины.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 9,
+  "fields": {
+    "subcategory": 8,
+    "name": "Мандарины",
+    "slug": "frukty-kitai-mandariny",
+    "price": "150.00",
+    "image_original": "products/original/Мандарины_F2tDx30.jpg",
+    "image_medium": "products/medium/Мандарины_F2tDx30.jpg",
+    "image_thumbnail": "products/thumbnail/Мандарины_F2tDx30.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 10,
+  "fields": {
+    "subcategory": 9,
+    "name": "Мандарины",
+    "slug": "frukty-rossiia-mandariny",
+    "price": "70.00",
+    "image_original": "products/original/Мандарины_HD70A2f.jpg",
+    "image_medium": "products/medium/Мандарины_HD70A2f.jpg",
+    "image_thumbnail": "products/thumbnail/Мандарины_HD70A2f.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 11,
+  "fields": {
+    "subcategory": 12,
+    "name": "Картофель",
+    "slug": "ovoshchi-italiia-kartofel",
+    "price": "30.00",
+    "image_original": "products/original/Картофель.jpg",
+    "image_medium": "products/medium/Картофель.jpg",
+    "image_thumbnail": "products/thumbnail/Картофель.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 12,
+  "fields": {
+    "subcategory": 13,
+    "name": "Картофель",
+    "slug": "ovoshchi-kitai-kartofel",
+    "price": "55.00",
+    "image_original": "products/original/Картофель_p13fyJb.jpg",
+    "image_medium": "products/medium/Картофель_p13fyJb.jpg",
+    "image_thumbnail": "products/thumbnail/Картофель_p13fyJb.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 13,
+  "fields": {
+    "subcategory": 11,
+    "name": "Картофель",
+    "slug": "ovoshchi-rossiia-kartofel",
+    "price": "65.00",
+    "image_original": "products/original/Картофель_bdVJV7d.jpg",
+    "image_medium": "products/medium/Картофель_bdVJV7d.jpg",
+    "image_thumbnail": "products/thumbnail/Картофель_bdVJV7d.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 14,
+  "fields": {
+    "subcategory": 12,
+    "name": "Капуста",
+    "slug": "ovoshchi-italiia-kapusta",
+    "price": "69.00",
+    "image_original": "products/original/Капуста.jpg",
+    "image_medium": "products/medium/Капуста.jpg",
+    "image_thumbnail": "products/thumbnail/Капуста.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 15,
+  "fields": {
+    "subcategory": 13,
+    "name": "Капуста",
+    "slug": "ovoshchi-kitai-kapusta",
+    "price": "45.00",
+    "image_original": "products/original/Капуста_bI4J3OT.jpg",
+    "image_medium": "products/medium/Капуста_bI4J3OT.jpg",
+    "image_thumbnail": "products/thumbnail/Капуста_bI4J3OT.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 16,
+  "fields": {
+    "subcategory": 11,
+    "name": "Капуста",
+    "slug": "ovoshchi-rossiia-kapusta",
+    "price": "55.50",
+    "image_original": "products/original/Капуста_glUaCxp.jpg",
+    "image_medium": "products/medium/Капуста_glUaCxp.jpg",
+    "image_thumbnail": "products/thumbnail/Капуста_glUaCxp.jpg"
+  }
+}
+]
