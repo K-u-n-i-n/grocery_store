@@ -7,6 +7,8 @@ v1_router = DefaultRouter()
 v1_router.register(r'cart', CartViewSet, basename='cart')
 
 urlpatterns = [
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
     path('categories/', CategoryListView.as_view(), name='categories-list'),
     path('products/', ProductListView.as_view(), name='products-list'),
     path('', include(v1_router.urls)),
