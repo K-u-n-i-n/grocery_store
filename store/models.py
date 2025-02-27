@@ -1,8 +1,10 @@
 import os
+from decimal import Decimal
 from io import BytesIO
 
 from django.contrib.auth.models import AbstractUser
 from django.core.files.base import ContentFile
+from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.text import slugify
 from PIL import Image
@@ -90,7 +92,10 @@ class Product(models.Model):
     slug = models.SlugField(
         unique=True, blank=True, help_text='Заполняется автоматически'
     )
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    price = models.DecimalField(
+        max_digits=10, decimal_places=2,
+        validators=[MinValueValidator(Decimal('0.01'))]
+    )
     image_original = models.ImageField(
         upload_to='products/original/'
     )
