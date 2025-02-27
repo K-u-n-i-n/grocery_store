@@ -18,17 +18,19 @@ from .serializers import (
 class CategoryListView(generics.ListAPIView):
     """Эндпоинт для просмотра списка категорий с подкатегориями."""
 
-    queryset = Category.objects.all()
+    queryset = Category.objects.all().order_by('name')
     serializer_class = CategorySerializer
     pagination_class = PageNumberPagination
+    ordering = ['name']
 
 
 class ProductListView(generics.ListAPIView):
     """Эндпоинт для просмотра списка продуктов."""
 
-    queryset = Product.objects.all()
+    queryset = Product.objects.all().order_by('name')
     serializer_class = ProductSerializer
     pagination_class = PageNumberPagination
+    ordering = ['name']
 
 
 class CartViewSet(viewsets.ViewSet):
